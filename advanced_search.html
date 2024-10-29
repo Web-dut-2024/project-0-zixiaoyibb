@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Advanced Search</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   </head>
+   <body>
+       <div class="nav">
+           <a href="{{ url_for('index') }}">Google Search</a>
+       </div>
+       <div class="search-container">
+           <form action="https://www.google.com/search" method="get">
+               <label>All these words:</label>
+               <input type="text" name="as_q"><br>
+               <label>This exact word or phrase:</label>
+               <input type="text" name="as_epq"><br>
+               <label>Any of these words:</label>
+               <input type="text" name="as_oq"><br>
+               <label>None of these words:</label>
+               <input type="text" name="as_eq"><br>
+               <div class="buttons">
+                   <input type="submit" value="Advanced Search">
+               </div>
+           </form>
+       </div>
+   </body>
+   </html>
